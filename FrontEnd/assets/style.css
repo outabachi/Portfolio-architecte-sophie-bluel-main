@@ -109,6 +109,7 @@ section {
 
 body {
 	line-height: 1;
+	overflow-x: hidden;
 }
 
 ol,
@@ -146,6 +147,10 @@ header {
 	display: flex;
 	justify-content: space-between;
 	margin: 50px 0
+}
+
+a {
+	text-decoration: none;
 }
 
 section {
@@ -309,10 +314,11 @@ button {
 	margin-bottom: 30px;
 	height: 37px;
 }
+
 #filtres button {
-padding-left: 10px;
-padding-right: 10px;
-margin-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 15px;
 }
 
 button:hover {
@@ -348,25 +354,172 @@ button:hover {
 	margin-left: auto;
 	margin-right: auto;
 }
+
 #log_in form {
 	text-align: left;
 	margin-top: 30px;
 	display: flex;
 	flex-direction: column;
 }
+
 #input_email {
 	width: 379px;
 	margin-left: auto;
 	margin-right: auto;
 }
+
 #input_password {
 	width: 379px;
 	margin-left: auto;
 	margin-right: auto;
 }
+
 #log_in a {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	color: #3D3D3D;
+}
+
+/* css apres l'hautentification de sophie */
+#modify-header {
+	width: 100vw;
+	height: 59px;
+	background-color: black;
+	margin-left: -62px;
+	justify-content: center;
+}
+
+#edition-mode {
+	display: flex;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#space {
+	width: 10px;
+	height: 19px;
+}
+
+#modify-header span {
+	color: white;
+	height: 19px;
+	width: 19px;
+}
+
+#modify-header p {
+	color: white;
+	margin-top: 3px;
+}
+
+#modify-project {
+	display: flex;
+	justify-content: center;
+}
+
+#modify {
+	cursor: pointer;
+}
+
+#modify p {
+	margin-top: 8px;
+}
+.edition {
+	display: none;
+}
+
+/* modale */
+aside {
+	position: fixed;
+	justify-content: center;
+	display: none;
+	z-index: 100;
+	top: 50%;
+	transform: translateY(-50%);
+	align-items: center;
+	left: 50%;
+	transform: translateX(-50%);
+
+}
+
+#modale {
+	width: 45vw;
+	height: 92vh;
+	background-color: white;
+	border-radius: 10px;
+	position: absolute;
+}
+
+#croix {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+#modale h2 {
+	text-align: center;
+	color: black;
+	font-family: 'work sans';
+	font-size: 26px;
+	font-weight: 400;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.gallery-modale {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-row-gap: 25px;
+	grid-column-gap: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 65%;
+	overflow: auto;
+}
+
+.gallery-modale img {
+	width: 100%;
+	height: 102.57px;
+}
+
+.gallery-modale span {
+	position: absolute;
+	color: white;
+	background-color: black;
+	cursor: pointer;
+	margin-left: 60px;
+}
+
+.gallery-modale figure {
+	position: relative;
+}
+
+#ligne {
+	position: absolute;
+	width: 80%;
+	background-color: gray;
+	height: 2px;
+	left: 50%;
+	bottom: 80px;
+	transform: translateX(-50%);
+
+}
+
+#modale input {
+	cursor: pointer;
+	border-width: 1px;
+	background-color: #1D6154;
+	border-radius: 60px;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	font-family: 'Syne';
+	padding: 10px 30px 10px 30px;
+	font-weight: 700;
+	bottom: 20px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
 }

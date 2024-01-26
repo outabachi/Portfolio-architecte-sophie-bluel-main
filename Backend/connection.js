@@ -19,17 +19,16 @@ function connection() {
         })
             .then(response => {
                 if (response.ok) {
-                   return response.json()
+                    return response.json()
                 }
                 else {
                     window.alert("Email ou mot de passe incorrect");
                 }
             })
             .then(data => {
-                localStorage.setItem(data.userId, data.token);
-                window.location.href = './index.html';
+                localStorage.setItem("userId", data.userId);
+                localStorage.setItem("token", data.token);
             })
     })
-
 };
 connection()
