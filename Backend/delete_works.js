@@ -1,3 +1,4 @@
+import token from "./token.js";
 // export de la fonction deleteWorks
 export default deleteWorks
 function deleteWorks() {
@@ -5,12 +6,10 @@ function deleteWorks() {
 
     poubellesList.forEach((poubelle) => {
         poubelle.addEventListener("click", () => {
-            let figureElement = document.querySelector("figure");
-            figureElement.remove();
             fetch("http://localhost:5678/api/works/" + poubelle.id, {
                 method: 'DELETE',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Authorization': `Bearer ${token}`
                 }
             })
                 .then(response => response.json())

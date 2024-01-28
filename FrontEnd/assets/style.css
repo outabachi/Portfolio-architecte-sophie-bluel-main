@@ -141,6 +141,7 @@ body {
 	margin: auto;
 	font-family: 'Work Sans';
 	font-size: 14px;
+	background-color: #FFFEF8;
 }
 
 header {
@@ -294,13 +295,26 @@ footer nav ul {
 	justify-content: flex-end;
 	margin: 2em
 }
-
+footer{
+	height: 60px;
+	background-color: white;
+}
+#main-container footer{
+	height: 60px;
+	background-color: white;
+}
+#main-container footer li{
+	margin-top: 25px;
+}
+footer li{
+	margin-top: 25px;
+}
 /* les filtres */
 button {
 
 	border-color: #1D6154;
 	border-width: 1px;
-	background-color: white;
+	background-color: #FFFEF8;
 	border-radius: 60px;
 	color: #1D6154;
 	font-size: 16px;
@@ -332,6 +346,9 @@ button:hover {
 }
 
 /* log in */
+#log_in{
+	margin-bottom: 0px;
+}
 #log_in>* {
 	text-align: center;
 
@@ -450,7 +467,13 @@ aside {
 	position: absolute;
 }
 
-#croix {
+#croix_1 {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+#croix_2 {
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -488,7 +511,7 @@ aside {
 	color: white;
 	background-color: black;
 	cursor: pointer;
-	margin-left: 60px;
+	margin-left: 57px;
 }
 
 .gallery-modale figure {
@@ -506,7 +529,7 @@ aside {
 
 }
 
-#modale input {
+#btn_modale_1 {
 	cursor: pointer;
 	border-width: 1px;
 	background-color: #1D6154;
@@ -522,4 +545,101 @@ aside {
 	left: 50%;
 	transform: translateX(-50%);
 
+}
+#modale_2{
+	display: none;
+}
+#fleche {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	cursor: pointer;
+}
+#upload {
+	width: 420px;
+	height: 169px;
+	background-color: #E8F1F6;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#upload img{
+	position: absolute;
+	width: 173px;
+	height: 169px;
+	margin-left: 123px;
+	display: none;
+}
+#upload input[type="file"]{
+	display: none;
+}
+#upload label{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 173px;
+	height: 36px;
+	background-color: #CBD6DC;
+	color: #306685;
+	border-radius: 50px;
+	font-size: 14px;
+	font-weight: 500;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
+#upload span{
+	display: flex;
+	justify-content: center;
+	font-size: 76px;
+	color: #B9C5CC;
+	padding-top: 18px;
+}
+#upload p{
+	display: flex;
+	justify-content: center;
+}
+#upload_input{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#upload_input input{
+	width: 420px;
+	height: 40px;
+	border: none;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#upload_input select{
+	width: 420px;
+	height: 40px;
+	border: none;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#upload_input_1{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+#upload_input_2{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+#btn_modale_2{
+	cursor: pointer;
+	border: none;
+	background-color: #A7A7A7;
+	border-radius: 60px;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	font-family: 'Syne';
+	padding: 10px 30px 10px 30px;
+	font-weight: 700;
+	bottom: 0px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 237px;
 }

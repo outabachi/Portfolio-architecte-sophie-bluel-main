@@ -18,22 +18,59 @@
 	<script type="module" src="/Backend/worksModale.js" defer></script>
 	<script type="module" src="/Backend/modale.js" defer></script>
 	<script type="module" src="/Backend/delete_works.js" defer></script>
-	<script type="module" src="/Backend/connection.js" defer></script>
 	<script type="module" src="/Backend/token.js" defer></script>
+	<script type="module" src="/Backend/add_photos.js" defer></script>
+	<script type="module" src="/Backend/category_modale.js" defer></script>
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-	<aside>
+	<aside id="modale_1">
 		<div id="modale">
-			<span id="croix" class="material-symbols-outlined">
+			<span id="croix_1" class="material-symbols-outlined">
 				close
 			</span>
 			<h2>Galerie photo</h2>
 			<div class="gallery-modale">
 			</div>
 			<div id="ligne"></div>
-			<input type="button" value="Ajouter une photo">
+			<input id="btn_modale_1" type="button" value="Ajouter une photo">
+		</div>
+	</aside>
+	<aside id="modale_2">
+		<div id="modale">
+			<span id="fleche" class="material-symbols-outlined">
+				arrow_back
+			</span>
+			<span id="croix_2" class="material-symbols-outlined">
+				close
+			</span>
+			<h2>Ajout photo</h2>
+			<form id="form_2">
+				<div id="upload">
+					<img src="" alt="">
+					<span class="material-symbols-outlined">
+						imagesmode
+					</span>
+					<label for="file">+ Ajouter une photo</label>
+					<input type="file" id="file" accept="image/*">
+					<p>jpg, png : 4mo max</p>
+				</div>
+				<div id="upload_input">
+					<div id="upload_input_1">
+						<label for="titre">Titre</label>
+						<input type="text" name="titre" id="title">
+					</div>
+					<div id="upload_input_2">
+						<label for="options">Catégorie</label>
+						<input list="options" id="optionInput" name="options">
+						<datalist id="options">
+						</datalist>
+					</div>
+				</div>
+				<input id="btn_modale_2" type="submit" value="valider">
+			</form>
+			<div id="ligne"></div>
 		</div>
 	</aside>
 	<div id="main-container">
@@ -113,7 +150,6 @@
 				</form>
 			</section>
 		</main>
-
 		<footer>
 			<nav>
 				<ul>

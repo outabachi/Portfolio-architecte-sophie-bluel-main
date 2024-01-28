@@ -1,6 +1,6 @@
 function connection() {
-    let submit = document.querySelector("form")
-    submit.addEventListener("submit", (event) => {
+    let submit1 = document.getElementById("form_1")
+    submit1.addEventListener("submit", (event) => {
         // Désactivation du comportement par défaut du navigateur
         event.preventDefault();
 
@@ -28,6 +28,7 @@ function connection() {
             .then(data => {
                 localStorage.setItem("userId", data.userId);
                 localStorage.setItem("token", data.token);
+                window.location.href = './index.html';
             })
     })
 };
