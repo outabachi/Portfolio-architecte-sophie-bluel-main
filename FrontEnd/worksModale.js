@@ -1,16 +1,18 @@
-// import de la fonction deleteWorks
+export default genererWorksModale;
 import deleteWorks from "./delete_works.js";
+// récuperer la balise ou l'on va mettre tout ca
+let galleryElement = document.querySelector(".gallery-modale");
 // Récupération des works depuis l'API
 fetch("http://localhost:5678/api/works")
     // Parse la réponse en JSON
     .then(response => response.json())
     .then(works => {
         // Appel de la fonction genererWorks une fois que les données sont prêtes
-        genererWorks(works);
-        deleteWorks();
+        genererWorksModale(works);
+        deleteWorks(works);
     })
 // Fonction qui génère les works
-function genererWorks(works) {
+function genererWorksModale(works) {
     for (let work of works) {
         // Création d'une balise figure 
         const figureElement = document.createElement("figure");
@@ -28,8 +30,6 @@ function genererWorks(works) {
         const imageElement = document.createElement("img");
         // On accède à l’indice i de la liste works pour configurer la source de l’image.
         imageElement.src = work.imageUrl;
-        // récuperer la balise ou l'on va mettre tout ca
-        let galleryElement = document.querySelector(".gallery-modale");
         // on rattache la span à la balise figure
         figureElement.appendChild(spanElement);
         // On rattache l’image à la balise figure

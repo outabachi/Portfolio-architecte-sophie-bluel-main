@@ -13,6 +13,7 @@ function genererWorks(works) {
     for (let work of works) {
         // Création d'une balise figure 
         const figureElement = document.createElement("figure");
+        figureElement.dataset.id = work.id;
         // Création d’une balise dédiée au titre
         const titleElement = document.createElement("figcaption");
         // On crée l’élément img.

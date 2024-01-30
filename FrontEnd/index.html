@@ -12,15 +12,15 @@
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 	<meta name="description" content="">
-	<script type="module" src="/Backend/category.js" defer></script>
-	<script type="module" src="/Backend/works.js" defer></script>
-	<script type="module" src="/Backend/filtres.js" defer></script>
-	<script type="module" src="/Backend/worksModale.js" defer></script>
-	<script type="module" src="/Backend/modale.js" defer></script>
-	<script type="module" src="/Backend/delete_works.js" defer></script>
-	<script type="module" src="/Backend/token.js" defer></script>
-	<script type="module" src="/Backend/add_photos.js" defer></script>
-	<script type="module" src="/Backend/category_modale.js" defer></script>
+	<script type="module" src="category.js" defer></script>
+	<script type="module" src="works.js" defer></script>
+	<script type="module" src="filtres.js" defer></script>
+	<script type="module" src="worksModale.js" defer></script>
+	<script type="module" src="modale.js" defer></script>
+	<script type="module" src="delete_works.js" defer></script>
+	<script type="module" src="token.js" defer></script>
+	<script type="module" src="add_photos.js" defer></script>
+	<script type="module" src="category_modale.js" defer></script>
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 
@@ -63,9 +63,7 @@
 					</div>
 					<div id="upload_input_2">
 						<label for="options">Catégorie</label>
-						<input list="options" id="optionInput" name="options">
-						<datalist id="options">
-						</datalist>
+						<select name="options" id="options"></select>
 					</div>
 				</div>
 				<input id="btn_modale_2" type="submit" value="valider">
@@ -73,22 +71,26 @@
 			<div id="ligne"></div>
 		</div>
 	</aside>
-	<div id="main-container">
-		<div id="modify-header" class="edition">
-			<div id="edition-mode">
-				<span class="material-symbols-outlined">
-					edit_square
-				</span>
-				<div id="space"></div>
-				<p>Mode edition</p>
-			</div>
+	<div id="modify-header" class="edition">
+		<div id="edition-mode">
+			<span class="material-symbols-outlined">
+				edit_square
+			</span>
+			<div id="space"></div>
+			<p>Mode edition</p>
 		</div>
+	</div>
+	<div id="main-container">
 		<header>
 			<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 			<nav>
 				<ul>
-					<li>projets</li>
-					<li>contact</li>
+					<a href="#portfolio">
+						<li>projets</li>
+					</a>
+					<a href="#contact">
+						<li>contact</li>
+					</a>
 					<a href="./connection.html">
 						<li>login</li>
 					</a>
@@ -150,14 +152,14 @@
 				</form>
 			</section>
 		</main>
-		<footer>
-			<nav>
-				<ul>
-					<li>Mentions Légales</li>
-				</ul>
-			</nav>
-		</footer>
 	</div>
+	<footer>
+		<nav>
+			<ul>
+				<li>Mentions Légales</li>
+			</ul>
+		</nav>
+	</footer>
 </body>
 
 </html>
