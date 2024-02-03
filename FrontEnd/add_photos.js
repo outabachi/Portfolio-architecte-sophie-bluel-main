@@ -3,11 +3,7 @@ function addPhoto(e) {
     let input = e.target;
     let image = document.querySelector('#upload img');
     if (input.files && input.files[0]) {
-        let reader = new FileReader();
-        reader.onload = function (e) {
-            image.src = e.target.result;
-        }
-        reader.readAsDataURL(input.files[0]);
+        image.src = "./assets/images/" + input.files[0].name;
         image.style.display = "flex";
     }
 }
@@ -90,3 +86,31 @@ submit.addEventListener("submit", (e) => {
         })
 
 })
+// Récupérez les éléments nécessaires du DOM
+let fileInput = document.getElementById('file');
+let titleInput = document.getElementById('title');
+let optionsSelect = document.getElementById('options');
+let submitButton = document.getElementById('btn_modale_2');
+
+// Ajoutez des écouteurs d'événements pour les changements dans les champs
+fileInput.addEventListener('change', checkForm);
+titleInput.addEventListener('input', checkForm);
+optionsSelect.addEventListener('change', checkForm);
+
+// Fonction pour vérifier si le formulaire est valide
+function checkForm() {
+    // Vérifiez si les champs nécessaires sont remplis
+    let fileSelected = fileInput.files && fileInput.files[0];
+    let titleFilled = titleInput.value.trim() !== '';
+    let optionSelected = optionsSelect.value !== '';
+
+    // Activez ou désactivez le bouton en fonction de la validité du formulaire
+    submitButton.disabled = !(fileSelected && titleFilled && optionSelected);
+
+    // Modifiez la couleur de fond du bouton en fonction de sa propriété disabled
+    if (submitButton.disabled) {
+        submitButton.style.backgroundColor = "#A7A7A7";
+    } else {
+        submitButton.style.backgroundColor = "#1D6154";
+    }
+}
